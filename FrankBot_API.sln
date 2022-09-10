@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankBot_API", "FrankBot_API\FrankBot_API.csproj", "{24E134CD-35A7-4CED-931F-424DA5F515CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24E134CD-35A7-4CED-931F-424DA5F515CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E134CD-35A7-4CED-931F-424DA5F515CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E134CD-35A7-4CED-931F-424DA5F515CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E134CD-35A7-4CED-931F-424DA5F515CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68747136-9E35-49E7-A292-CB74BEB5549F}
+	EndGlobalSection
+EndGlobal
