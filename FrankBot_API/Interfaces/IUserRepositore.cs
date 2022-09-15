@@ -17,6 +17,12 @@ namespace FrankBot_API.Interfaces
         /// <returns></returns>
         public Task<Users> GetUserByChatIdAsync(long chatId);
         /// <summary>
+        /// Gets the user by id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public Task<Users> GetUserByIdAsync(int Id);
+        /// <summary>
         /// Add user to database
         /// </summary>
         /// <param name="user"></param>
@@ -25,9 +31,9 @@ namespace FrankBot_API.Interfaces
         /// <summary>
         /// Remove user from database
         /// </summary>
-        /// <param name="chatId"></param>
+        /// <param name="user"></param>
         /// <returns></returns>
-        public Task DeleteUserAsync(long chatId);
+        public Task DeleteUserAsync(Users user);
         /// <summary>
         /// Add user's money
         /// </summary>

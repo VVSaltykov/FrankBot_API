@@ -28,6 +28,15 @@ namespace FrankBot_API.Repositories
             }
             return user;
         }
+        public static async Task<Users> GetUserByIdAsync(int Id)
+        {
+            var user = await appDBContext.User.Where(u => u.Id == Id).FirstOrDefaultAsync();
+            if (user == null)
+            {
+                throw new NullException();
+            }
+            return user;
+        }
         public static async Task AddUserAsync(Users user)
         {
             try
@@ -40,10 +49,9 @@ namespace FrankBot_API.Repositories
                 Console.WriteLine(ex.Message);
             }
         }
-        public static async Task DeleteUserAsync(long chatId)
+        public static async Task DeleteUserAsync(Users user)
         {
-            var user = GetUserByChatIdAsync(chatId);
-            appDBContext.User.Remove(await user);
+            appDBContext.User.Remove(user);
             await appDBContext.SaveChangesAsync();
         }
         public static async Task MoneyAddAsync(long chatId, string message)
