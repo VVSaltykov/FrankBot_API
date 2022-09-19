@@ -6,10 +6,14 @@ using FrankBot_API.Exceptions;
 namespace FrankBot_API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController: ControllerBase
     {
         private readonly IUserRepositore userRepositore;
+        public UsersController(IUserRepositore usersRepositore)
+        {
+            userRepositore = usersRepositore;
+        }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Users>> Get(int id)
