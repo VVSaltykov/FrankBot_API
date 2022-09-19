@@ -25,15 +25,15 @@ namespace FrankBot_API.Interfaces
         /// <summary>
         /// Add user to database
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public Task AddUserAsync(Users user);
+        public Task AddUserAsync(int id);
         /// <summary>
         /// Remove user from database
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public Task DeleteUserAsync(Users user);
+        public Task DeleteUserAsync(int id);
         /// <summary>
         /// Add user's money
         /// </summary>

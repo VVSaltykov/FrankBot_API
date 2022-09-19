@@ -28,11 +28,11 @@ namespace FrankBot_API.Controllers
             }
         }
         [HttpPost]
-        public async Task<ActionResult> Add(Users user)
+        public async Task<ActionResult> Add(int id)
         {
             try
             {
-                await userRepositore.AddUserAsync(user);
+                await userRepositore.AddUserAsync(id);
                 return Ok("User added");
             }
             catch 
@@ -40,12 +40,12 @@ namespace FrankBot_API.Controllers
                 return NotFound("");
             }
         }
-        [HttpPost]
-        public async Task<ActionResult> Delete(Users user)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
         {
             try
             {
-                await userRepositore.DeleteUserAsync(user);
+                await userRepositore.DeleteUserAsync(id);
                 return Ok("User deleted");
             }
             catch
