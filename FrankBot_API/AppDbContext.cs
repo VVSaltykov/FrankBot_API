@@ -7,14 +7,9 @@ namespace FrankBot_API
     {
         public DbSet<Users> User { get; set; } = null!;
 
-        public AppDbContext()
+        public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
         {
             Database.EnsureCreated();
         }
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySql("server = localhost; user = root; password = Afina2010; database = usersdb;",
-                new MySqlServerVersion(new Version(8, 0, 30)));
-        }*/
     }
 }

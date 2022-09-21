@@ -2,6 +2,9 @@
 using FrankBot_API.Interfaces;
 using FrankBot_API.Models;
 using FrankBot_API.Exceptions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FrankBot_API.Controllers
 {
@@ -28,6 +31,7 @@ namespace FrankBot_API.Controllers
             }
         }
         [HttpPost]
+        ///[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Add(int id)
         {
             try
@@ -41,6 +45,7 @@ namespace FrankBot_API.Controllers
             }
         }
         [HttpDelete("{id}")]
+        ///[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Delete(int id)
         {
             try
