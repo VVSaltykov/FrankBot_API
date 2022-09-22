@@ -30,7 +30,7 @@ namespace FrankBot_API
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "HouseSellingBaseRedactionApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FrankBotRedactionApi", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
                     Name = "Authorization",
